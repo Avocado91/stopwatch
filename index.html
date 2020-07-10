@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
+    <title>Gold Stopwatch</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link
@@ -16,23 +16,31 @@
     />
   </head>
   <body>
-    <h1>Stopwatch</h1>
-    <span>00:00:00</span>
-    <button>
-      <span
-        class="iconify"
-        data-icon="ant-design:play-circle-outlined"
-        data-inline="false"
-      ></span>
-      <span
-        class="iconify"
-        data-icon="ant-design:pause-circle-outlined"
-        data-inline="false"
-      ></span>
-    </button>
-    <button>
-      <span class="iconify" data-icon="el:stop-alt" data-inline="false"></span>
-    </button>
+    <div class="stopwatch">
+      <h1><span class="gold">Gold</span> Stopwatch</h1>
+      <span class="time">00:00:00</span>
+      <div>
+        <button>
+          <span
+            class="iconify"
+            data-icon="ant-design:play-circle-outlined"
+            data-inline="false"
+          ></span>
+          <span
+            class="iconify"
+            data-icon="ant-design:pause-circle-outlined"
+            data-inline="false"
+          ></span>
+        </button>
+        <button>
+          <span
+            class="iconify"
+            data-icon="el:stop-alt"
+            data-inline="false"
+          ></span>
+        </button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
