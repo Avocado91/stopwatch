@@ -14,3 +14,23 @@ const timeToString = (time) => {
 
   return `${formattedHH}:${formattedMM}:${formattedSS}`
 }
+
+const start = () => {
+  console.log("start was clicked")
+}
+
+const pause = () => {
+  console.log("pause clicked")
+}
+
+const reset = () => {
+  console.log("reset clicked")
+}
+
+let playButton = document.getElementById("playButton")
+let pauseButton = document.getElementById("pauseButton")
+let resetButton = document.getElementById("resetButton")
+
+playButton.addEventListener("click", start)
+pauseButton.addEventListener("click", pause)
+resetButton.addEventListener("click", reset)
