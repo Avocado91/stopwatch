@@ -43,13 +43,32 @@ h1 {
   width: 270px;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 187px;
+}
+
 button {
+  cursor: pointer;
   background: transparent;
   padding: 0;
   border: none;
   margin: 0;
   outline: none;
   font-size: 60px;
+}
+
+#playButton {
+  display: block;
+}
+
+#pauseButton {
+  display: none;
+}
+
+#resetButton {
+  margin-top: 13px; /*align with play/pause button */
 }
 
 .button {
