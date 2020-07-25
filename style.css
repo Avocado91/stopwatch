@@ -42,3 +42,27 @@ h1 {
   justify-content: center;
   width: 270px;
 }
+
+button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+  font-size: 60px;
+}
+
+.button {
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.button--gold {
+  color: #f2c94c;
+  border: 1px solid #f2c94c;
+}
+
+.button--white {
+  color: #fff;
+  border: 1px solid #fff;
+}
