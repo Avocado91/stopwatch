@@ -21,11 +21,15 @@ const timeToString = (time) => {
 let startTime
 let elapsedTime
 
+const print = (txt) => {
+  document.getElementById("display").innerHTML = txt
+}
+
 const start = () => {
   startTime = Date.now()
   setInterval(function printTime() {
     elapsedTime = Date.now() - startTime
-    document.getElementById("display").innerHTML = timeToString(elapsedTime)
+    print(timeToString(elapsedTime))
   }, 10)
 }
 
