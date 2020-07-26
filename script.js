@@ -15,8 +15,17 @@ const timeToString = (time) => {
   return `${formattedHH}:${formattedMM}:${formattedSS}`
 }
 
+let startTime
+let elapsedTime
+
 const start = () => {
-  console.log("start was clicked")
+  startTime = Date.now()
+  setInterval(function printTime() {
+    elapsedTime = Date.now() - startTime
+    document.getElementById("display").innerHTML = timeToString(elapsedTime)
+  }, 1000)
+
+  console.log("start")
 }
 
 const pause = () => {
