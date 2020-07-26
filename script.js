@@ -21,6 +21,13 @@ const timeToString = (time) => {
 let startTime
 let elapsedTime
 
+const showButton = (buttonKey) => {
+  const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton
+  const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton
+  buttonToShow.style.display = "block"
+  buttonToHide.style.display = "none"
+}
+
 const print = (txt) => {
   document.getElementById("display").innerHTML = txt
 }
@@ -31,6 +38,7 @@ const start = () => {
     elapsedTime = Date.now() - startTime
     print(timeToString(elapsedTime))
   }, 10)
+  showButton("PAUSE")
 }
 
 const pause = () => {
