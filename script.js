@@ -19,7 +19,8 @@ const timeToString = (time) => {
 }
 
 let startTime
-let elapsedTime
+let elapsedTime = 0
+let timerInterval
 
 const showButton = (buttonKey) => {
   const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton
@@ -33,19 +34,29 @@ const print = (txt) => {
 }
 
 const start = () => {
-  startTime = Date.now()
-  setInterval(function printTime() {
-    elapsedTime = Date.now() - startTime
-    print(timeToString(elapsedTime))
-  }, 10)
+  startTime = Date.now() - elapsedTime
+  timerInterval = setInterval(
+    (printTime = () => {
+      elapsedTime = Date.now() - startTime
+      print(timeToString(elapsedTime))
+    }),
+    10
+  )
   showButton("PAUSE")
+  console.log("start")
 }
 
 const pause = () => {
+  clearInterval(timerInterval)
+  showButton("PLAY")
   console.log("pause clicked")
 }
 
 const reset = () => {
+  clearInterval(timerInterval)
+  print("00:00:00")
+  elapsedTime = 0
+  showButton("PLAY")
   console.log("reset clicked")
 }
 
